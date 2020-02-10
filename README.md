@@ -1,4 +1,16 @@
-Notes:
+## Compilation:
+
+```
+$ bash compil.sh
+```
+
+## Execution:
+
+```
+$ ./quad
+```
+
+## Notes:
 
 Je ne suis pas très satisfait de la précision du programme.
 Je pensais efectivement atteindre une meilleure précision,
