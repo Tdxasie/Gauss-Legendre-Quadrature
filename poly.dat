@@ -1,0 +1,6 @@
+&poly
+    npoly = 2 
+/ coefficients are ordered in increasing power of x / 
+0.16666666666666666
+0.0
+1.0
