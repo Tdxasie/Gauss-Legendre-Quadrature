@@ -1,7 +1,7 @@
 ## Compilation:
 
 ```
-$ bash compil.sh
+$ make
 ```
 
 ## Execution:
