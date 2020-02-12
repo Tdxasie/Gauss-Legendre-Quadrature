@@ -7,7 +7,7 @@ $ make
 ## Execution:
 
 ```
-$ ./quad
+$ ./quad.exe
 ```
 
 ## Notes:
