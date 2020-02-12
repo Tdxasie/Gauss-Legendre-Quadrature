@@ -12,3 +12,6 @@ quad_mod.o: precision_mod.o functions_mod.o quad_mod.f90
 
 quad.o: quad_mod.o precision_mod.o functions_mod.o quad.f90
 	gfortran -c quad.f90
+
+clean:
+	rm -f *.o *.mod quad
