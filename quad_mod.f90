@@ -16,8 +16,7 @@ contains
         real(dp), intent(in) :: a, b
         integer :: k
         real(dp) :: f, Quad_GL, rescale, shift
-        real(dp) :: wk(nquad), xk(nquad)
-        call GL_xw(xk, wk)
+        Quad_GL = 0;
         shift = (a+b)/2
         rescale = (b-a)/2
         do k = 1, nquad
@@ -26,14 +25,13 @@ contains
         Quad_GL = Quad_GL * rescale
     end function Quad_GL
 !
-    subroutine GL_xw(xk, wk) ! generates points and weights
+    subroutine GL_xw() ! generates points and weights
         ! if n odd:
         !   dpn structure: sym + piv + reversed_sym
         !   x   structure: sym + 0 + reversed_sym*-1
         ! if n even:
         !   dpn structure: sym + reversed_sym*-1
         !   x   structure: sym + reversed_sym*-1
-        real(dp), intent(inout) :: wk(nquad), xk(nquad)
         integer :: k, i
         real(dp) :: dpn, dx, p0, p1, pn, x
         real(dp) :: dpnv(nquad)
@@ -92,6 +90,7 @@ contains
         read(7, settings)
         allocate(xk(nquad), wk(nquad))
         close(7)
+        call GL_xw()
     end subroutine init_quad
 !
     subroutine clean_mem() ! frees allocated memory
