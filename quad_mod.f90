@@ -17,8 +17,8 @@ contains
         integer :: k
         real(dp) :: f, Quad_GL, rescale, shift
         Quad_GL = 0;
-        shift = (a+b)/2
-        rescale = (b-a)/2
+        shift = (a+b)*0.5_dp
+        rescale = (b-a)*0.5_dp
         do k = 1, nquad
             Quad_GL = Quad_GL + wk(k)*f(rescale*xk(k)+shift)
         end do
